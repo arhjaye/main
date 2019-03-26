@@ -164,19 +164,21 @@ public class VersionedProject extends Project {
             if (taskReturnString == null) {
                 taskReturnString = ("Description: " + task1.getDescription());
                 targetReturnString = ("Description: " + target.getDescription());
-
+            } else {
+                taskReturnString = (taskReturnString + " | Description: " + task1.getDescription());
+                targetReturnString = (targetReturnString + " | Description: " + target.getDescription());
             }
-            taskReturnString = (taskReturnString + " | Description: " + task1.getDescription());
-            targetReturnString = (targetReturnString + " | Description: " + target.getDescription());
+
         }
         if (task1.getDeadline() != target.getDeadline()) {
             if (taskReturnString == null) {
                 taskReturnString = ("Deadline: " + task1.getDeadline());
                 targetReturnString = ("Deadline: " + target.getDeadline());
-
+            } else {
+                taskReturnString = (taskReturnString + " | Deadline: " + task1.getDeadline());
+                targetReturnString = (targetReturnString + " | Deadline: " + target.getDeadline());
             }
-            taskReturnString = (taskReturnString + " | Deadline: " + task1.getDeadline());
-            targetReturnString = (targetReturnString + " | Deadline: " + target.getDeadline());
+
         }
 
         returnString.add(taskReturnString);
